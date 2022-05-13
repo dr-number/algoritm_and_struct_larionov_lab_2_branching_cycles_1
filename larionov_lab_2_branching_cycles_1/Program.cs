@@ -425,6 +425,7 @@
 
                 if (xStr.ToLower() == symbolExit.ToLower())
                     return symbolExit;
+
                 else if (!isNumber)
                 {
 
