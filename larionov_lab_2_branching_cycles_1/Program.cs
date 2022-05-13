@@ -421,12 +421,13 @@
                 Console.WriteLine(text);
 
                 xStr = Console.ReadLine();
-                isNumber = int.TryParse(xStr, out x);
 
                 if (xStr.ToLower() == symbolExit.ToLower())
                     return symbolExit;
 
-                else if (!isNumber)
+                isNumber = int.TryParse(xStr, out x);
+
+                if (!isNumber)
                 {
 
                     Console.ForegroundColor = ConsoleColor.Red;
