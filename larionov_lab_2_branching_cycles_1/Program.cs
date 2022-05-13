@@ -279,7 +279,6 @@
             else if(var1 > 0 && var2 > 0 && var3 < 0)
             {
                 Console.WriteLine($"\nДва первых цисла положительны, третье отрицательно. Возведем в квадрат третье число (по условию задачи)");
-                
                 var3 = (int) Math.Pow(var3, 2);
 
             }
@@ -297,7 +296,7 @@
                 int sign2 = Math.Sign(var2);
                 int sign3 = Math.Sign(var3);
 
-                if(sign1 == sign2 && sign2 == sign3)
+                if(sign1 == sign2 && sign2 == sign3 && sign1 == sign3)
                 {
                     if(sign1 > 0)
                         Console.WriteLine($"\nВсе числа положительны\n");
