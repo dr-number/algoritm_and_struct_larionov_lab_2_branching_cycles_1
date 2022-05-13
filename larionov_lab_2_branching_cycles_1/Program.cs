@@ -446,7 +446,9 @@
                 return false;
 
             int sum = 1;
-            for (int i = 2; i < num / 2 + 1; i++) 
+            int count = num / 2 + 1;
+
+            for (int i = 2; i < count; ++i) 
                 if (num % i == 0) sum += i;
 
             return sum == num;
