@@ -108,8 +108,8 @@
 
     class Task1
     {
-        const int MIN = -1000;
-        const int MAX = 1000;
+        private const int MIN = -1000;
+        private const int MAX = 1000;
 
         private struct arguments
         {
@@ -400,12 +400,16 @@
 
     class Task9
     {
-        public const int MAX_COUNT = 50;
-        public const int DEFAULT_COUNT = 20;
-        public const int MAX_SUBSEQUENCE = 8500;
+        private const int MIN_COUNT = 10;
+        private const int MAX_COUNT = 50;
 
-        public const int MIN_RANDOM = -200;
-        public const int MAX_RANDOM = 200;
+        private const int DEFAULT_COUNT = 20;
+        private const int MAX_SUBSEQUENCE = 8500;
+
+        private const int MIN_RANDOM = -200;
+        private const int MAX_RANDOM = 200;
+
+        private const string EXIT_SYMBOL = "Z";
 
         private string inputNumber(string text, string symbolExit)
         {
@@ -500,7 +504,6 @@
                 Console.WriteLine("Ручной ввод данных\n");
 
                 string strNumber = "";
-                const string EXIT_SYMBOL = "Z";
 
                 for (int i = 0; i < MAX_COUNT; i++)
                 {
@@ -520,7 +523,7 @@
                 Console.WriteLine("Генерация случайных чисел\n");
 
                 MyInput myInput = new MyInput();
-                int count = myInput.inputData($"Сколько сгенерировать случайных чисел? (Не более {MAX_COUNT}) Для {MAX_COUNT} нажмите Enter: \n", 0, MAX_COUNT, DEFAULT_COUNT);
+                int count = myInput.inputData($"Сколько сгенерировать случайных чисел? (Не более {MAX_COUNT}) Для {MAX_COUNT} нажмите Enter: \n", MIN_COUNT, MAX_COUNT, DEFAULT_COUNT);
 
                 int randomNumber;
                 string number;
