@@ -330,16 +330,6 @@
     {
         private double EXACTNESS = 0.0001, DEFAULT_X = 0.5;
 
-        private double f(double x, double n, double factorial)
-        {
-            return (Math.Pow(Math.Log(3), n) / factorial) * Math.Pow(x, n);
-        }
-
-        private double checkF(double x)
-        {
-            return Math.Pow(3, x);
-        }
-
         public void init()
         {
             int factorial = 1, n = 1;
@@ -362,7 +352,7 @@
             do //Цикл с постусловием
             {
                 prev = current;
-                current = f(x, n, factorial);
+                current = (Math.Pow(Math.Log(3), n) / factorial) * Math.Pow(x, n);
 
                 sum += current;
 
@@ -376,7 +366,7 @@
             } 
             while (Math.Abs(current - prev) > EXACTNESS);
 
-            double check = checkF(x);
+            double check = Math.Pow(3, x);
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nСумма ряда равна: {0,30}", sum);
